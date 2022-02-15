@@ -9,8 +9,8 @@ public class EmpWageUC8 {
         // Variables
         int empHrs = 0, totalEmpWage =0, totalEmpHrs = 0, totalWorkingDays = 0;
         // Computation
-        while (totalEmpHrs <= maxHrsPerMonth &&
-                totalWorkingDays < numOfWorkingDays) {
+        while (totalEmpHrs <= maxHrsPerMonth && totalWorkingDays < numOfWorkingDays) {
+            totalWorkingDays++;
             int empCheck = (int) Math.floor(Math.random() * 10) % 3;
             switch (empCheck) {
                 case IS_FULL_TIME:
@@ -24,7 +24,7 @@ public class EmpWageUC8 {
             }
             totalEmpHrs += empHrs;
             int empWage = empHrs * empRatePerHr;
-            System.out.println("Emp Hr: " + empHrs);
+            System.out.println("Day#: " + totalWorkingDays + " Emp Hr: " + empHrs);
             System.out.println("Emp Wage = " + empWage);
             System.out.println();
         }
